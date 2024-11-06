@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#registrasi" onclick="showContent('registrasi')">Registrasi</a></li>
+                <li><a href="#list-user" onclick="showContent('list-user')">List User</a></li>
+                <li><a href="#todo-list" onclick="showContent('todo-list')">To-Do List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="registrasi" class="content">
+            <h2>Registrasi</h2>
+            <form>
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <button type="submit">Daftar</button>
+            </form>
+        </section>
+
+        <section id="list-user" class="content" style="display:none;">
+            <h2>List User</h2>
+            <ul>
+                <li>User 1 <button onclick="showUserDetail('User 1', 'user1@example.com')">Detail</button></li>
+                <li>User 2 <button onclick="showUserDetail('User 2', 'user2@example.com')">Detail</button></li>
+                <li>User 3 <button onclick="showUserDetail('User 3', 'user3@example.com')">Detail</button></li>
+            </ul>
+        </section>
+
+        <section id="todo-list" class="content" style="display:none;">
+            <h2>To-Do List</h2>
+            <ul>
+                <li><input type="checkbox"> Tugas 1</li>
+                <li><input type="checkbox"> Tugas 2</li>
+                <li><input type="checkbox"> Tugas 3</li>
+            </ul>
+        </section>
+
+        <section id="user-detail" class="content" style="display:none;">
+            <h2>Detail User</h2>
+            <p><strong>Nama:</strong> <span id="user-name"></span></p>
+            <p><strong>Email:</strong> <span id="user-email"></span></p>
+            <button onclick="showContent('list-user')">Back</button>
+        </section>
+    </main>
+
+    <script>
+        function showContent(id) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function showUserDetail(name, email) {
+            document.getElementById('user-name').textContent = name;
+            document.getElementById('user-email').textContent = email;
+            showContent('user-detail');
+        }
+    </script>
+</body>
+</html>

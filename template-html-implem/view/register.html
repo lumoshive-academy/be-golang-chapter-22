@@ -1,0 +1,20 @@
+{{define "register-view"}}
+    {{template "layout-view"}}
+    <main>
+        <section id="registrasi">
+            <h2>Registrasi</h2>
+            <form action="/register" method="POST">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" required><br>
+                <button type="submit">Daftar</button>
+            </form>
+        </section>
+    </main>
+    {{template "footer"}}
+{{end}}

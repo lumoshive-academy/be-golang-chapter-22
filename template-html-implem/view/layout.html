@@ -1,0 +1,139 @@
+{{define "layout-view"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Menu</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+                * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+.list-data {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.list-data p {
+    width: 350px;
+}
+
+.btn-active {
+    background-color: green;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.btn-inactive {
+    background-color: red;
+}
+
+.btn-detail {
+    background-color:cadetblue;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.btn-progress {
+    background-color:cadetblue;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+     </style>
+</head>
+<body>
+    {{template "header"}}
+{{end}}

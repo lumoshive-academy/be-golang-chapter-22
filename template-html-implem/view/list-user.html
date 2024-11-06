@@ -1,0 +1,17 @@
+{{define "list-user-view"}}
+    {{template "layout-view"}}
+<main>
+    <section id="list-user" class="content">
+        <h2>List User</h2>
+        <ul>
+            {{range .}}
+            <li class="list-data">
+                <p>{{.Name}}</p>
+                <a class="btn-active {{if eq .Status "inactive"}}btn-inactive{{end}}" href="">{{.Status}}</a>
+                <a class="btn-detail" href="/customre-detail/{{.ID}}">detail</a>
+            </li>
+            {{end}}
+        </ul>
+    </section>
+</main>
+{{end}}
